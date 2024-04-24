@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Run Docker Container') {
             steps {
-                sh('docker run -d -p 8080:8080 sicei-${GIT_BRANCH}:1.1.0-${BUILD_NUMBER}')
+                sh('docker run -d -p 8000:8000 sicei-${GIT_BRANCH}:1.1.0-${BUILD_NUMBER}')
                 sh('docker container ls')
             }
         }
